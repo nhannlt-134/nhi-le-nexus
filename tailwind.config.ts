@@ -26,7 +26,29 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
+				},
+				// Custom color palette for Nhi Lê design
+				pink: {
+					100: 'hsl(var(--pink-100))',
+					400: 'hsl(var(--pink-400))',
+					500: 'hsl(var(--pink-500))'
+				},
+				orange: {
+					100: 'hsl(var(--orange-100))',
+					500: 'hsl(var(--orange-500))'
+				},
+				teal: {
+					100: 'hsl(var(--teal-100))',
+					500: 'hsl(var(--teal-500))'
+				},
+				gray: {
+					50: 'hsl(var(--gray-50))',
+					200: 'hsl(var(--gray-200))',
+					600: 'hsl(var(--gray-600))',
+					700: 'hsl(var(--gray-700))',
+					800: 'hsl(var(--gray-800))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -68,6 +90,9 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			fontFamily: {
+				'vietnam': ['Be Vietnam Pro', 'sans-serif']
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {
@@ -84,11 +109,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'hover-lift': {
+					'0%': { transform: 'translateY(0px)' },
+					'100%': { transform: 'translateY(-2px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'hover-lift': 'hover-lift 0.3s ease-in-out'
 			}
 		}
 	},
